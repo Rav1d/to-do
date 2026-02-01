@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(250, 250, 250);
+}
+
+.global-container{
+    width: 30%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+.top-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+.body-container{
+    padding: 0 1rem;
+}
+.list-elements{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
