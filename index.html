@@ -2,13 +2,20 @@
 <head>
     <title>TO-DO App</title>
     <link href="styles.css" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
 </head>
 <body>
     <div class="global-container">
         <div class="top-container">
-            <h1 class="title">TO-DO</h1>
-            <input type="text" class="input-add">
-            <button class="btn-add">Add Task</button>
+            <div class="left-top-container">
+                <h1 class="title">TO-DO</h1>
+            </div>
+            <div class="right-top-container">
+                <input type="text" class="input-add" placeholder="Add your task here...">
+                <button class="btn-add">Add Task</button>
+            </div>
         </div>
         <div class="body-container">
             <p class="message"></p>
