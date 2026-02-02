@@ -14,7 +14,9 @@ const addNewTask = (text) => {
         const newBtnDelete = document.createElement('button')
 
         newTextItem.textContent = text
+        newListItem.classList.add('list-item')
         newBtnDelete.textContent = 'X'
+        newBtnDelete.classList.add('btn-delete')
         newListElements.classList.add('list-elements')
 
         newListElements.appendChild(newTextItem)
