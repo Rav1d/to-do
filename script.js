@@ -6,27 +6,39 @@ const message = document.querySelector('.message')
 const addNewTask = (text) => {
     if(text.trim() == ''){
         message.textContent = 'Cannot add empty tasks. Try again'
+        inputAdd.classList.add('empty-input')
     } else {
+        inputAdd.classList.remove('empty-input')
         message.textContent = ''
         const newListItem = document.createElement('li')
         const newListElements =  document.createElement('div')
+        const newListButtons = document.createElement('div')
         const newTextItem = document.createElement('p')
         const newBtnDelete = document.createElement('button')
-
+        const newBtnDone = document.createElement('button');
+        
         newTextItem.textContent = text
         newListItem.classList.add('list-item')
+        newBtnDone.textContent = 'Done'
+        newBtnDone.classList.add('btn-done')
         newBtnDelete.textContent = 'X'
         newBtnDelete.classList.add('btn-delete')
+
         newListElements.classList.add('list-elements')
+        newListButtons.classList.add('list-buttons')
 
         newListElements.appendChild(newTextItem)
-        newListElements.appendChild(newBtnDelete)
+
+        newListButtons.appendChild(newBtnDone)
+        newListButtons.appendChild(newBtnDelete)
+
+        newListElements.appendChild(newListButtons)
         newListItem.appendChild(newListElements)
         listContainer.appendChild(newListItem)
 
         newBtnDelete.addEventListener('click', (event) => {
             if(event.target.tagName == 'BUTTON'){
-                newBtnDelete.parentElement.parentElement.remove();
+                newBtnDelete.parentElement.parentElement.parentElement.remove();
             }
         }) 
     }
