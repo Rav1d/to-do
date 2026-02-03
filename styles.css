@@ -67,12 +67,39 @@ body{
     background-color: rgb(216, 0, 0);
     transition: 0.2s;
 }
+.btn-status{
+    margin-right: 3.5px;
+    cursor: pointer;
+    background-color:  rgb(187, 187, 0);
+    color:white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.btn-status:hover{
+    background-color: rgb(184, 184, 0);
+    transition: 0.2s;
+}
 .message{
     color: rgb(255, 0, 0);
     font-weight: bold;
+    margin: 0;
+    padding-bottom: 20px;
 }
 .list-item{
     padding: 5px;
+    padding-top: 0px;
     font-weight: 500;
+}
+.list-container{
+    margin: 0px
+}
+.btn-item-status{
+    background-color: rgb(84, 187, 0);
+}
+.btn-item-status:hover{
+    background-color: rgb(76, 143, 0);
 }
 
