@@ -96,10 +96,3 @@ body{
 .list-container{
     margin: 0px
 }
-.btn-item-status{
-    background-color: rgb(84, 187, 0);
-}
-.btn-item-status:hover{
-    background-color: rgb(76, 143, 0);
-}
-
