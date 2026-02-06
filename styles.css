@@ -9,7 +9,7 @@ body{
     border-radius: 20px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.103);
     background-color: rgb(255, 255, 255);
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
 }
 .top-container{
     display: flex;
@@ -19,25 +19,24 @@ body{
     padding: 0 2rem;
 }
 .body-container{
-    padding: 0 1rem;
+    padding: 0 1rem 0px 1rem;
 }
 .left-list-elements{
     display: flex;
     align-items: center;
-    padding: 0 1rem;
 }
 .list-elements{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0px 0.5rem 10px 0.5rem;
 }
 .btn-add{
     cursor: pointer;
     background-color: blue;
     color:white;
     border: none;
-    padding: 8px 12px;
+    padding: 8px 16px;
     border-radius: 0px 10px 10px 0px;
     font-weight: bold;
     transition: 0.2s;
@@ -72,7 +71,7 @@ body{
 .btn-status{
     margin-right: 3.5px;
     cursor: pointer;
-    background-color:  rgb(83, 155, 0);
+    background-color:  rgb(194, 181, 0);
     color:white;
     border: none;
     padding: 8px 12px;
@@ -81,7 +80,18 @@ body{
     transition: 0.2s;
 }
 .btn-status:hover{
-    background-color: rgb(72, 134, 0);
+    background-color: rgb(161, 159, 0);
+    transition: 0.2s;
+}
+.btn-status.done{
+    margin-right: 3.5px;
+    cursor: pointer;
+    background-color:  rgb(83, 155, 0);
+    color:white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: bold;
     transition: 0.2s;
 }
 .message{
