@@ -38,20 +38,20 @@ const addNewTask = (text) => {
     newListItem.appendChild(newListElements)
     listContainer.appendChild(newListItem)
 
-    newBtnDelete.addEventListener('click', (event) => {
-        if(event.target.tagName == 'BUTTON'){
-            newListItem.remove()
-        }
-    }) 
-    newBtnStatus.addEventListener('click', () => {
-            newBtnStatus.classList.toggle('done')
-    })
-
     inputAdd.value = ''
 }
     
-
 btnAdd.addEventListener('click', ()=>{
     const texto = inputAdd.value
     addNewTask(texto)
 })
+
+listContainer.addEventListener('click', (event) => {
+    if(event.target.className == 'btn-delete'){
+        event.target.closest('.list-item').remove()
+    }
+    if(event.target.classList.contains('btn-status')){
+        event.target.classList.toggle('done')
+    }
+}) 
+    
