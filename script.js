@@ -23,7 +23,7 @@ const addNewTask = (text) => {
     newListItem.classList.add('list-item')
     newBtnDelete.textContent = 'X'
     newBtnDelete.classList.add('btn-delete')
-    newBtnStatus.textContent = 'Done'
+    newBtnStatus.textContent = 'Undo'
     newBtnStatus.classList.add('btn-status')
 
     newListElements.classList.add('list-elements')
@@ -51,7 +51,15 @@ listContainer.addEventListener('click', (event) => {
         event.target.closest('.list-item').remove()
     }
     if(event.target.classList.contains('btn-status')){
-        event.target.classList.toggle('done')
+        if(event.target.classList.contains('done')){
+            event.target.classList.remove('done')
+            event.target.textContent = 'Undo'
+        } else {
+            event.target.classList.add('done')
+            event.target.textContent = 'Done'
+        }
     }
 }) 
+
+
     
