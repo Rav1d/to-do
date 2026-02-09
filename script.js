@@ -2,6 +2,10 @@ const inputAdd = document.querySelector('.input-add');
 const btnAdd = document.querySelector('.btn-add');
 const listContainer = document.querySelector('.list-container');
 const message = document.querySelector('.message')
+const body = document.body
+const btnDarkMode = document.querySelector('.btn-dark-mode')
+const globalContainer = document.querySelector('.global-container')
+const title = document.querySelector('.title')
 
 const addNewTask = (text) => {
     if(text.trim() == ''){
@@ -18,12 +22,13 @@ const addNewTask = (text) => {
     const newTextItem = document.createElement('p')
     const newBtnDelete = document.createElement('button')
     const newBtnStatus = document.createElement('button')
+    
         
     newTextItem.textContent = text
     newListItem.classList.add('list-item')
     newBtnDelete.textContent = 'X'
     newBtnDelete.classList.add('btn-delete')
-    newBtnStatus.textContent = 'Undo'
+    newBtnStatus.textContent = 'Done'
     newBtnStatus.classList.add('btn-status')
 
     newListElements.classList.add('list-elements')
@@ -40,7 +45,15 @@ const addNewTask = (text) => {
 
     inputAdd.value = ''
 }
-    
+
+const darkMode = () => {
+    body.classList.toggle('dark-mode')
+    title.classList.toggle('dark-mode')
+    globalContainer.classList.toggle('dark-mode')
+    inputAdd.classList.toggle('dark-mode')
+    listContainer.classList.toggle('dark-mode')
+}
+
 btnAdd.addEventListener('click', ()=>{
     const texto = inputAdd.value
     addNewTask(texto)
@@ -53,13 +66,16 @@ listContainer.addEventListener('click', (event) => {
     if(event.target.classList.contains('btn-status')){
         if(event.target.classList.contains('done')){
             event.target.classList.remove('done')
-            event.target.textContent = 'Undo'
+            event.target.textContent = 'Done'
         } else {
             event.target.classList.add('done')
-            event.target.textContent = 'Done'
+            event.target.textContent = 'Undo'
         }
     }
 }) 
 
+btnDarkMode.addEventListener('click', () => {
+    darkMode()
+})
 
     
