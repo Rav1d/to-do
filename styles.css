@@ -2,6 +2,7 @@ body{
     background-color: rgb(250, 250, 250);
     font-family: "Montserrat";
     transition: 0.2s;
+    z-index: 1;
 }
 body.dark-mode{
     background-color: rgb(24, 24, 24);
@@ -114,6 +115,21 @@ body.dark-mode{
     color:white;
     transition: 0.2s;
 }
+.btn-edit{
+    margin-right: 3.5px;
+    cursor: pointer;
+    background-color: rgb(255, 136, 0);
+    color:white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.btn-edit:hover{
+    background-color: rgb(201, 98, 1);
+    transition: 0.2s;
+}
 .message{
     color: rgb(255, 0, 0);
     font-weight: bold;
@@ -157,5 +173,12 @@ body.dark-mode{
     color: white;
     transition: 0.2s;
 }
-
+.edit-container{
+    display: none;
+}
+.edit-container.active{
+    display: block;
+    position: absolute;
+    z-index: 5;
+}
 

@@ -6,6 +6,9 @@ const body = document.body
 const btnDarkMode = document.querySelector('.btn-dark-mode')
 const globalContainer = document.querySelector('.global-container')
 const title = document.querySelector('.title')
+const editContainer = document.querySelector('.edit-container')
+const inputEdit = document.querySelector('.input-edit')
+const btnEdit = document.querySelector('.btn-edit')
 
 const addNewTask = (text) => {
     if(text.trim() == ''){
@@ -22,6 +25,7 @@ const addNewTask = (text) => {
     const newTextItem = document.createElement('p')
     const newBtnDelete = document.createElement('button')
     const newBtnStatus = document.createElement('button')
+    const newBtnEdit = document.createElement('button')
     
         
     newTextItem.textContent = text
@@ -30,12 +34,15 @@ const addNewTask = (text) => {
     newBtnDelete.classList.add('btn-delete')
     newBtnStatus.textContent = 'Done'
     newBtnStatus.classList.add('btn-status')
+    newBtnEdit.classList.add('btn-edit')
+    newBtnEdit.textContent = 'Edit'
 
     newListElements.classList.add('list-elements')
     newListButtons.classList.add('list-buttons')
 
     newListElements.appendChild(newTextItem)
 
+    newListButtons.appendChild(newBtnEdit)
     newListButtons.appendChild(newBtnStatus)
     newListButtons.appendChild(newBtnDelete)
 
@@ -54,13 +61,17 @@ const darkMode = () => {
     listContainer.classList.toggle('dark-mode')
 }
 
+const editTask = (text) => {
+
+}
+
 btnAdd.addEventListener('click', ()=>{
     const texto = inputAdd.value
     addNewTask(texto)
 })
 
 listContainer.addEventListener('click', (event) => {
-    if(event.target.className == 'btn-delete'){
+    if(event.target.classList.contains('btn-delete')){
         event.target.closest('.list-item').remove()
     }
     if(event.target.classList.contains('btn-status')){
@@ -78,4 +89,8 @@ btnDarkMode.addEventListener('click', () => {
     darkMode()
 })
 
+btnEdit.addEventListener('click', ()=>{
+    const text = inputEdit.value
+    editTask(text)
+})
     
