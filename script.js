@@ -6,9 +6,6 @@ const body = document.body
 const btnDarkMode = document.querySelector('.btn-dark-mode')
 const globalContainer = document.querySelector('.global-container')
 const title = document.querySelector('.title')
-const editContainer = document.querySelector('.edit-container')
-const inputEdit = document.querySelector('.input-edit')
-const btnEdit = document.querySelector('.btn-edit')
 
 const addNewTask = (text) => {
     if(text.trim() == ''){
@@ -88,9 +85,3 @@ listContainer.addEventListener('click', (event) => {
 btnDarkMode.addEventListener('click', () => {
     darkMode()
 })
-
-btnEdit.addEventListener('click', ()=>{
-    const text = inputEdit.value
-    editTask(text)
-})
-    

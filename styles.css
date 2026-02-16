@@ -173,12 +173,5 @@ body.dark-mode{
     color: white;
     transition: 0.2s;
 }
-.edit-container{
-    display: none;
-}
-.edit-container.active{
-    display: block;
-    position: absolute;
-    z-index: 5;
-}
+
 
